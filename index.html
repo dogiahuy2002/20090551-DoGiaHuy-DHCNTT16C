@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px auto;
+    }
+    body{
+        background-image: url(../img/background.jpg);
+    } 
+    .wrapper{
+        height: 800px;
+        width: 1089px;
+        background-color: antiquewhite;
+    }
+    nav{
+        height: 50px;
+        width: 1089px;
+        background-color: rgb(152, 201, 243);
+        line-height: 50px;
+    }
+    header{
+        height: 150px;
+        width: 1089px;
+        background-image: url(../img/header.jpg);
+        background-color: rgb(216, 158, 158);
+        text-align: center;
+        font-size: 100px;
+        color: red;
+        font-weight: 100px;
+    }
+    .content{
+        height: 400px;
+        width: 1089px;
+        background-color: orange;
+    }
+    aside{
+        height: 400px;
+        width: 400px;
+        background-color: cornflowerblue;
+        float: left;
+    }
+    section{
+        height: 400px;
+        width: 689px;
+        background-color: rgb(46, 119, 74);
+        float: left;
+    }
+    .menu li {
+        float: left;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        list-style: none;
+        text-indent: 30px;
+        position: relative;
+        background-color: rgb(223, 174, 115);
+    }
+    a{
+        color: yellow;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .menu li :hover{
+        background-color: rgb(97, 92, 160);
+    }
+    li:hover>a{
+        color: blue;
+        font-style: italic;
+    }
+    .menu li .submenu{
+        display: none;
+        position: absolute;
+    }
+    .menu li :hover .submenu{
+        display: block;
+
+    }
+    nav span form #txtEmail{
+        padding: 3px;
+        color: brown;
+    }
+    nav span form #btnGO{
+        padding: 3px;
+        color: orange;
+        text-shadow: 3px 3px 3px;
+        border-radius: 50%;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">TIVI</a></li>
+                        <li><a href="">FRIDGE</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dagky.php">
+                    <label for="lblEmail">Email: </label>
+                    <input type="txtEmail" name="txtEmail" id="txtEmail" required placeholder="Nhap email">
+                    <input type="submit" value="GO" id="btnGO">
+                </form>
+            </span>
+        </nav>
+        <header>QUE HUONG TOI</header>
+        <div class="content">
+            <aside>
+                <H5 style="position: absolute; font-weight: bold; color: white;text-shadow: 3px 3px 3px  blueviolet;">GAMESHOW</H5>
+                <img src="../img/1.jpg" alt="" srcset="">
+                <H5 style="position: absolute; font-weight: bold; color: white;text-shadow: 3px 3px 3px  blueviolet;">HOAT DONG</H5>
+                <img src="../img/2.jpg" alt="" srcset=""> 
+                <H5 style="position: absolute; font-weight: bold; color: white;text-shadow: 3px 3px 3px  blueviolet;">THU THACH</H5>
+                <img src="../img/3.jpg" alt="" srcset=""> 
+
+            </aside>
+            <section>
+                <form action="dangky.php">
+                    <fieldset>
+                        <legend>THONG TIN CUA BAN</legend>
+                        <label for="lblHoTen">Ho ten</label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhap ho ten"> <br> <br>
+                        <label for="lblEmail">Email: </label>
+                        <input type="txtEmail" name="txtEmail" id="txtEmail" required placeholder="Nhap email"> <br> <br>
+                        <label for="lblNS">Ngay sinh</label>
+                        <input type="text" name="txtNS" id="txtNS" required placeholder="Ngay sinh" pattern="dd/mm/yyyy"> <br> <br>
+                        <label for="lblGT">Gioi tinh</label>
+                        <input type="radio" name="radNam" id="radNam" value="nam" checked > <label for="nam">Nam</label>
+                        <input type="radio" name="radNu" id="radNu" value="nu"  > <label for="nu">Nu</label>
+                        <input type="submit" value="GO" id="btnGO">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
